@@ -87,7 +87,7 @@ jobs:
           composer test:php:unit
       - id: tests_functional
         name: Functional Tests
-        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '^11' }}
+        if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer test:php:functional
         env:
